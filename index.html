@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AmeriVerso - Metaverso Educativo IED Las Américas</title>
+
+        <!-- Fuentes y Iconos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+        <!-- Hoja de Estilos -->
+        <link rel="stylesheet" href="Index.css">
+    </head>
+    <body>
+
+        <!-- Navegación Superior -->
+        <header class="navbar">
+            <div class="container nav-container">
+            <div class="logo">
+            <i class="fa-solid fa-cubes-stacked logo-icon"></i>
+            <div>
+                <span class="brand-name">AmeriVerso</span>
+                <span class="brand-sub">IED LAS AMÉRICAS</span>
+            </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#acerca">Qué es</a>
+        <a href="#laboratorios">Laboratorios</a>
+        <a href="#encuesta">Encuesta Estudiantil</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="openLoginBtn">
+          <i class="fa-solid fa-user-gear"></i> Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Banner Principal -->
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge badge-accent">
+          <i class="fa-solid fa-rocket"></i> Plataforma Oficial de Aprendizaje Gamificado
+        </span>
+        <h1>Aprende jugando en el metaverso de la <span>IED Las Américas</span></h1>
+        <p>
+          Explora laboratorios de ciencias, simula fenómenos físicos y supera retos matemáticos.
+          Guarda tu avance y acumulaciones de puntos ingresando con tu ID estudiantil.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg" onclick="document.getElementById('openLoginBtn').click()">
+            <i class="fa-solid fa-gamepad"></i> Ingresar al Metaverso
+          </button>
+          <a href="#encuesta" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-clipboard-check"></i> Responder Encuesta
+          </a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>100%</h3>
+            <p>Gratuito</p>
+          </div>
+          <div class="stat-card">
+            <h3>6° - 11°</h3>
+            <p>Grados Cobertura</p>
+          </div>
+          <div class="stat-card">
+            <h3>PhET & H5P</h3>
+            <p>Simulaciones</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <small>mapa_campus_virtual_v2.1.js</small>
+          </div>
+          <div class="preview-body">
+            <i class="fa-solid fa-vr-cardboard preview-icon"></i>
+            <h4>Campus Virtual Interactivo</h4>
+            <p>Selecciona tu grado y materia para acceder a los mundos de aprendizaje.</p>
+            <div class="tag-list">
+              <span class="tag">Física</span>
+              <span class="tag">Química</span>
+              <span class="tag">Matemáticas</span>
+              <span class="tag">Tecnología</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Sobre AmeriVerso -->
+  <section id="acerca" class="section bg-light">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>¿Cómo funciona AmeriVerso?</h2>
+        <p>Una herramienta diseñada para aprender haciendo, realizando experimentos reales desde la web.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h3>Acceso Institucional</h3>
+          <p>Ingresa con tu documento de identidad del colegio para mantener siempre registrado tu avance y calificaciones.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-flask-vial"></i></div>
+          <h3>Laboratorios Virtuales</h3>
+          <p>Simulaciones interactivas PhET y minijuegos H5P adaptados por asignatura para cada nivel escolar.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Calificación Automática</h3>
+          <p>Tus docentes revisan tus progresos, tiempos de juego e intentos para asignarte retroalimentación directa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Laboratorios por Grado y Asignatura -->
+  <section id="laboratorios" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Catálogo de Juegos y Laboratorios</h2>
+        <p>Filtra por tu grado escolar y materia de interés para previsualizar los desafíos.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-wrapper">
+        <div class="filter-group">
+          <label><i class="fa-solid fa-graduation-cap"></i> Grado:</label>
+          <div class="filter-buttons" id="gradeFilters">
+            <button class="filter-btn active" data-grade="todos">Todos</button>
+            <button class="filter-btn" data-grade="6">6°</button>
+            <button class="filter-btn" data-grade="7">7°</button>
+            <button class="filter-btn" data-grade="8">8°</button>
+            <button class="filter-btn" data-grade="9">9°</button>
+            <button class="filter-btn" data-grade="10">10°</button>
+            <button class="filter-btn" data-grade="11">11°</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label><i class="fa-solid fa-book"></i> Asignatura:</label>
+          <div class="filter-buttons" id="subjectFilters">
+            <button class="filter-btn active" data-subject="todas">Todas</button>
+            <button class="filter-btn" data-subject="ciencias">Ciencias</button>
+            <button class="filter-btn" data-subject="fisica">Física</button>
+            <button class="filter-btn" data-subject="quimica">Química</button>
+            <button class="filter-btn" data-subject="matematicas">Matemáticas</button>
+            <button class="filter-btn" data-subject="tecnologia">Tecnología</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de Laboratorios -->
+      <div class="labs-grid" id="labsGrid">
+        <!-- Renderizado dinámicamente por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Encuesta Estudiantil -->
+  <section id="encuesta" class="section bg-light">
+    <div class="container">
+      <div class="survey-card">
+        <div class="survey-header text-center">
+          <span class="badge">Tu opinión importa</span>
+          <h2>Encuesta de Satisfacción Estudiantil</h2>
+          <p>Ayúdanos a mejorar el metaverso de la IED Las Américas respondiendo estas breves preguntas.</p>
+        </div>
+
+        <form id="studentSurveyForm" class="survey-form">
+          <div class="form-group">
+            <label for="surveyStudentId">Documento / ID Estudiantil (Opcional):</label>
+            <input type="text" id="surveyStudentId" class="form-control" placeholder="Ej: 104589234">
+          </div>
+
+          <div class="form-group">
+            <label for="surveyGrade">Grado actual:</label>
+            <select id="surveyGrade" class="form-control" required>
+              <option value="">Selecciona tu grado...</option>
+              <option value="6">6° Grado</option>
+              <option value="7">7° Grado</option>
+              <option value="8">8° Grado</option>
+              <option value="9">9° Grado</option>
+              <option value="10">10° Grado</option>
+              <option value="11">11° Grado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>¿Qué tan fácil te resulta navegar en la plataforma?</label>
+            <div class="rating-stars" id="ratingStars">
+              <i class="fa-star fa-regular" data-value="1"></i>
+              <i class="fa-star fa-regular" data-value="2"></i>
+              <i class="fa-star fa-regular" data-value="3"></i>
+              <i class="fa-star fa-regular" data-value="4"></i>
+              <i class="fa-star fa-regular" data-value="5"></i>
+            </div>
+            <input type="hidden" id="surveyRating" value="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="surveyFavorite">¿Cuál es tu laboratorio o juego favorito?</label>
+            <input type="text" id="surveyFavorite" class="form-control" placeholder="Ej: Laboratorio de Densidad y Flotabilidad">
+          </div>
+
+          <div class="form-group">
+            <label for="surveyFeedback">Sugerencias para nuevos juegos o mejoras:</label>
+            <textarea id="surveyFeedback" class="form-control" rows="3" placeholder="Escribe tus ideas aquí..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Encuesta
+            </button>
+            <a href="https://forms.office.com" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir en Microsoft Forms
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Login -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeLoginBtn">&times;</button>
+      
+      <div class="modal-header">
+        <i class="fa-solid fa-user-astronaut modal-icon"></i>
+        <h3>Acceso a AmeriVerso</h3>
+        <p>Ingresa tus credenciales institucionales</p>
+      </div>
+
+      <!-- Selector de Rol -->
+      <div class="role-selector">
+        <button class="role-tab active" id="roleStudentBtn">
+          <i class="fa-solid fa-user-graduate"></i> Estudiante
+        </button>
+        <button class="role-tab" id="roleTeacherBtn">
+          <i class="fa-solid fa-chalkboard-user"></i> Docente
+        </button>
+      </div>
+
+      <form id="loginForm" class="modal-form">
+        <div class="form-group">
+          <label for="loginId">ID del Colegio / Cédula:</label>
+          <input type="text" id="loginId" class="form-control" placeholder="Ej: 1045238910" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Contraseña:</label>
+          <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <!-- Botón Demo Rápido -->
+        <div class="demo-box">
+          <small>¿Quieres probar rápido?</small>
+          <button type="button" class="btn-demo" id="demoLoginBtn">Cargar Credenciales Demo</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Ingresar a la Plataforma <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Perfil de Estudiante / Avance -->
+  <div class="modal-overlay" id="profileModal">
+    <div class="modal-box modal-lg">
+      <button class="modal-close" id="closeProfileBtn">&times;</button>
+      
+      <div class="profile-header">
+        <div class="avatar"><i class="fa-solid fa-user-ninja"></i></div>
+        <div>
+          <h3 id="profName">Estudiante Demo</h3>
+          <p><span id="profGrade">Grado 9°</span> • ID: <strong id="profId">1045238910</strong></p>
+        </div>
+      </div>
+
+      <div class="profile-stats">
+        <div class="p-stat">
+          <span>Promedio General</span>
+          <strong id="profAvg">4.5 / 5.0</strong>
+        </div>
+        <div class="p-stat">
+          <span>Labs Completados</span>
+          <strong id="profCompleted">4 de 6</strong>
+        </div>
+        <div class="p-stat">
+          <span>Puntos Acumulados</span>
+          <strong id="profPoints">850 pts</strong>
+        </div>
+      </div>
+
+      <h4>Tu Avance por Asignatura</h4>
+      <div class="progress-list" id="progressList">
+        <!-- Generado dinámicamente -->
+      </div>
+
+      <div class="text-right" style="margin-top: 20px;">
+        <button class="btn btn-secondary" id="logoutBtn">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <i class="fa-solid fa-cubes-stacked logo-icon"></i>
+          <span class="brand-name">AmeriVerso</span>
+        </div>
+        <p>Iniciativa de tecnología e innovación educativa para la comunidad IED Las Américas.</p>
+      </div>
+      <div>
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#acerca">Manual de Uso</a></li>
+          <li><a href="#laboratorios">Laboratorios</a></li>
+          <li><a href="#encuesta">Encuesta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Soporte Técnico</h4>
+        <p><i class="fa-solid fa-envelope"></i> soporte@iedlasamericas.edu.co</p>
+        <p><i class="fa-solid fa-location-dot"></i> Barranquilla, Colombia</p>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>© 2026 IED Las Américas — Plataforma Abierta y Gratuita.</p>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="index.js"></script>
+</body>
+</html>
